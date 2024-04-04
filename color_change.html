@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour change</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        #color{
+            height: 195px;
+            width: 150px;
+            border-radius: 10px;
+            background: var(--color);
+            font-size: 20px;
+            cursor: pointer;
+           }
+       #color-btn{
+        height: 40px;
+        min-width: 10%;
+        margin-left: 80px;
+        margin-top: -155px;
+        border: 0;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+        <button id="color"><b>Color change</b></button>
+        <div id="color-btn">
+            <button id="color-btn">Red</button>
+            <button id="color-btn">Green</button>
+            <button id="color-btn">Blue</button>
+            <button id="color-btn">Yellow</button><br><br>
+            <button id="color-btn">Purple</button>
+            <button id="color-btn">Orange</button>
+            <button id="color-btn">Pink</button>
+            <button id="color-btn">Cyan</button><br><br>
+            <button id="color-btn">Brown</button>
+            <button id="color-btn">Gray</button>
+            <button id="color-btn">Tan</button>
+            <button id="color-btn">Skyblue</button>
+        </div>
+
+        <script>
+        const colorBtn = document.getElementById('color');
+        const colorBtns = document.querySelectorAll('#color-btn button');
+
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const color = btn.textContent.toLowerCase();
+                colorBtn.style.setProperty('--color', color);
+                if (color === 'yellow') {
+                    console.log(colorBtn.style.color = 'black');
+                } 
+                else if (color === 'orange'){
+                    console.log(colorBtn.style.color = 'black');
+                }
+                else if (color === 'pink'){
+                    console.log(colorBtn.style.color = 'black');
+                }
+                else if (color === 'cyan'){
+                    console.log(colorBtn.style.color = 'black');
+                }
+                else {
+                    console.log(colorBtn.style.color = 'white');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
